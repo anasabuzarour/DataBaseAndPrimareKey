@@ -1,0 +1,41 @@
+SELECT * FROM customers
+ 
+ insert into customers(customerNumber,customerName,contactLastName,contactFirstName,phone,addressLine1,addressLine2,city,state,postalCode,country,salesRepEmployeeNumber,creditLimit)VALUES(
+                  500, 
+                 'Sunrise Ventures', 
+                 'Anderson', 
+                 'Michael', 
+				'212-555-1234',
+                '123 Main Street',
+                'Suite 200',
+				 'New York', 
+                 'NY', '10001',
+                 'USA', 1621,
+                 50000.00
+                 );
+select * from customers where customerNumber = 501    
+SELECT * FROM customers WHERE customerNumber = 205842;
+update customers set customersname = 'soso' where customersnumber = 103
+update customers set contactFirstName ='nooralhuda' where customerNumber = 501
+SELECT * FROM customers WHERE customerNumber = 37979;
+delete from customers where customerNumber = 501
+	
+alter table customers drop PRIMARY KEY 
+
+SELECT table_name , CONSTRAINT_NAME FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE 
+
+WHERE REFERENCED_TABLE_NAME = 'customers' AND REFERENCED_COLUMN_NAME= 'customerNumber'
+
+select * from orders
+
+select * from payments
+
+alter table orders drop foreign key  orders_ibfk_1
+alter table payments drop foreign key  payments_ibfk_1
+
+truncate table customers
+Select * from customers
+
+desc customers
+
+select count(customerNumber) from customers
